@@ -33,6 +33,12 @@
 -  Run `mvn spring-boot:run` to start the project
 -  Access `http://localhost:8080/swagger-ui/index.html` to see the Swagger
 
+Or
+
+-  Clone this repo
+-  Run `docker-compose up --build`
+-  Access `http://localhost:8080/swagger-ui/index.html` to see the Swagger
+
 ----------
 
 Made with :blue_heart: by brunoleomont  👋  [Get in touch!](https://www.linkedin.com/in/brunoleomont/)
