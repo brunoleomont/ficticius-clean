@@ -28,8 +28,6 @@ class DeliveryApplicationTests {
 	@MockBean
 	private VehicleRepository vehicleRepository;
 
-	List<DeliveryResponse> deliveryResponses;
-
 	@Test
 	void deliveryServiceResponseSizeTest() {
 		DeliveryRequest deliveryRequest = new DeliveryRequest(new BigDecimal(10.0), new BigDecimal(10.0), new BigDecimal(10.0));
@@ -44,8 +42,52 @@ class DeliveryApplicationTests {
 	}
 
 	@Test
+	void deliveryServiceResponseCheaperTest() {
+		DeliveryRequest deliveryRequest = new DeliveryRequest(new BigDecimal(10.0), new BigDecimal(100.0), new BigDecimal(100.0));
+		List<Vehicle> vehicles = new ArrayList<>();
+		Vehicle vehicleA = Utils.createVehicle();
+		vehicleA.setCityFuelConsumption(new BigDecimal(10));
+		vehicleA.setHighwayFuelConsumption(new BigDecimal(10));
+		vehicles.add(vehicleA);
+		Vehicle vehicleB = Utils.createVehicle();
+		vehicleB.setCityFuelConsumption(new BigDecimal(20));
+		vehicleB.setHighwayFuelConsumption(new BigDecimal(20));
+		vehicles.add(vehicleB);
+		Vehicle vehicleC = Utils.createVehicle();
+		vehicleC.setCityFuelConsumption(new BigDecimal(30));
+		vehicleC.setHighwayFuelConsumption(new BigDecimal(30));
+		vehicles.add(vehicleC);
+
+		when(vehicleRepository.findAll()).thenReturn(vehicles);
+		List<DeliveryResponse> deliveryResponse = deliveryService.getForecastCost(deliveryRequest);
+		assertEquals(vehicleC.getName(), deliveryResponse.get(0).getName());
+	}
+
+	@Test
+	void deliveryServiceResponseMoreExpensiveTest() {
+		DeliveryRequest deliveryRequest = new DeliveryRequest(new BigDecimal(10.0), new BigDecimal(100.0), new BigDecimal(100.0));
+		List<Vehicle> vehicles = new ArrayList<>();
+		Vehicle vehicleA = Utils.createVehicle();
+		vehicleA.setCityFuelConsumption(new BigDecimal(10));
+		vehicleA.setHighwayFuelConsumption(new BigDecimal(10));
+		vehicles.add(vehicleA);
+		Vehicle vehicleB = Utils.createVehicle();
+		vehicleB.setCityFuelConsumption(new BigDecimal(20));
+		vehicleB.setHighwayFuelConsumption(new BigDecimal(20));
+		vehicles.add(vehicleB);
+		Vehicle vehicleC = Utils.createVehicle();
+		vehicleC.setCityFuelConsumption(new BigDecimal(30));
+		vehicleC.setHighwayFuelConsumption(new BigDecimal(30));
+		vehicles.add(vehicleC);
+
+		when(vehicleRepository.findAll()).thenReturn(vehicles);
+		List<DeliveryResponse> deliveryResponse = deliveryService.getForecastCost(deliveryRequest);
+		assertEquals(vehicleA.getName(), deliveryResponse.get(2).getName());
+	}
+
+	@Test
 	void deliveryServiceResponseCostTest() {
-		DeliveryRequest deliveryRequest = new DeliveryRequest(new BigDecimal(100.0), new BigDecimal(100.0), new BigDecimal(100.0));
+		DeliveryRequest deliveryRequest = new DeliveryRequest(new BigDecimal(10.0), new BigDecimal(100.0), new BigDecimal(100.0));
 		List<Vehicle> vehicles = new ArrayList<>();
 		Vehicle vehicleA = Utils.createVehicle();
 		vehicles.add(vehicleA);
@@ -60,7 +102,7 @@ class DeliveryApplicationTests {
 
 	@Test
 	void deliveryServiceResponseConsumeFuelTest() {
-		DeliveryRequest deliveryRequest = new DeliveryRequest(new BigDecimal(100.0), new BigDecimal(100.0), new BigDecimal(100.0));
+		DeliveryRequest deliveryRequest = new DeliveryRequest(new BigDecimal(10.0), new BigDecimal(100.0), new BigDecimal(100.0));
 		List<Vehicle> vehicles = new ArrayList<>();
 		Vehicle vehicleA = Utils.createVehicle();
 		vehicles.add(vehicleA);
