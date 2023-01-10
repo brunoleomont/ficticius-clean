@@ -4,23 +4,15 @@
 <p align="center">
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/brunoleomont/ficticius-clean.svg">
   
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/brunoleomont/ficticius-clean.svg">
-  
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/ficticius-clean/ficticius-clean.svg">
-  <a href="https://github.com/brunoleomont/ficticius-clean/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/ficticius-clean/ficticius-clean.svg">
-  </a>
-  
   <a href="https://github.com/brunoleomont/ficticius-clean/issues">
     <img alt="Repository issues" src="https://img.shields.io/github/issues/brunoleomont/ficticius-clean.svg">
   </a>
 </p>
 
 <p align="center">
-<a href="#rocket-technology">Technology</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-technology">Technology</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#ballot_box_with_check-prerequisites">Prerequisites</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="#up-getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-license">License</a>
+  <a href="#up-getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 ## [](#technology):rocket: Technology
@@ -40,9 +32,6 @@
 -  Run `mvn clean install` to download dependencies.
 -  Run `./mvnw spring-boot:run` to start the project
 -  Access `http://localhost:8080/swagger-ui/index.html` to see the Swagger
-
-## [](#license):memo: License
-This project is under the MIT license. See the [LICENSE](https://github.com/brunoleomont/ficticius-clean/blob/master/LICENSE) for more information.
 
 ----------
 
