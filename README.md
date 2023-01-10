@@ -30,7 +30,7 @@
 
 -  Clone this repo
 -  Run `mvn clean install` to download dependencies.
--  Run `./mvnw spring-boot:run` to start the project
+-  Run `mvn spring-boot:run` to start the project
 -  Access `http://localhost:8080/swagger-ui/index.html` to see the Swagger
 
 ----------
