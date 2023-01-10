@@ -6,11 +6,6 @@
   
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/brunoleomont/ficticius-clean.svg">
   
-  <a href="https://www.codacy.com/app/brunoleomont/ficticius-clean?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=brunoleomont/ficticius-clean&amp;utm_campaign=Badge_Grade">
-    <img alt="Codacy grade" src="https://img.shields.io/codacy/grade/70c8e79c83b442278f6c276ebf117ae4.svg">
-  </a>
-  
-  
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/ficticius-clean/ficticius-clean.svg">
   <a href="https://github.com/brunoleomont/ficticius-clean/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/ficticius-clean/ficticius-clean.svg">
