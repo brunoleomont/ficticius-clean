@@ -36,7 +36,8 @@
 Or
 
 -  Clone this repo
--  Run `docker-compose up --build`
+-  Run `docker-compose build`
+-  Run `docker-compose up`
 -  Access `http://localhost:8080/swagger-ui/index.html` to see the Swagger
 
 ----------
